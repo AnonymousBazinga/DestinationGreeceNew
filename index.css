@@ -1,0 +1,385 @@
+/* index.css */
+@media (max-width: 1000px) {
+    .dropdown {
+        visibility: visible;
+        display: block;
+    }
+
+    .pc_view {
+        visibility: hidden;
+        display: none;
+    }
+
+    .dropdown > input {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+@media (min-width: 1001px) {
+
+    .dropdown {
+        visibility: hidden;
+        display: none;
+    }
+
+    .pc_view {
+        visibility: visible;
+        display: block;
+    }
+
+    .navbar-container a {
+        text-decoration: none;
+        color: #333;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+    }
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Playfair Display", serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styling */
+nav {
+    background-color: #f9f9f9;
+    padding: 20px 35px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav {
+    z-index: 1000;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav img {
+    height: 40%; /* Adjust to fit horizontal logo */
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+.navbar-container {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar-container a:hover {
+    color: #0077b6; /* A soft blue hover effect */
+}
+
+#owl-slider-nav {
+    height: 100vh; /* Full page height */
+}
+
+.owl-carousel .item {
+    position: relative;
+    overflow: hidden;
+    height: 100vh; /* Full page height */
+}
+
+.owl-carousel .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without cropping */
+}
+
+/* Text Styling */
+.owl-capture {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #006e93; /* Soothing light blue color */
+    font-family: Arial, sans-serif;
+    text-decoration: none; /* No underline */
+    font-weight: normal; /* Removes bold */
+}
+
+.owl-capture h2 a {
+    text-decoration: none; /* Removes underline */
+    color: #00455c;
+    font-size: 32px; /* Adjust for better readability */
+}
+
+.owl-capture p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* Owl Carousel Navigation (Arrows) */
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    pointer-events: none; /* Prevent arrows from shifting content */
+}
+
+.owl-nav button {
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background for the arrow */
+    color: #add8e6;
+    border: none;
+    font-size: 36px; /* Larger arrow size */
+    cursor: pointer;
+    pointer-events: all; /* Allows clicking */
+    padding: 15px;
+    border-radius: 50%; /* Circular button */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.owl-nav button:hover {
+    background-color: rgba(0, 0, 0, 0.6); /* Darker background on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
+}
+
+/* Dots Styling */
+.owl-dots {
+    position: absolute;
+    bottom: 20px; /* Move dots onto the image */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.owl-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white dots */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.owl-dot.active {
+    background-color: #d6e7f8; /* Highlight active dot */
+}
+
+.owl-dot:hover {
+    background-color: #ffffff; /* Fully white on hover */
+}
+
+/* Typography */
+h3 {
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin: 0.5rem;
+}
+
+/* Destination Card Styling */
+.destination_card {
+    width: 20rem;
+    height: 25rem;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.destination_card > button {
+    margin-top: auto;
+    height: 2rem;
+}
+
+.destination_card img {
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+/* ----------------- */
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    position: relative; /* Required for dropdown positioning */
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%; /* Position below the parent menu */
+    left: 0;
+    background-color: #444;
+    display: none; /* Hidden by default */
+    min-width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.dropdown:focus-within .dropdown-menu,
+.dropdown a:focus + .dropdown-menu {
+    display: block;
+}
+
+.tours {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+
+.tour-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures cards move to the next line when resizing */
+    gap: 40px; /* Adds a clean space between cards */
+    justify-content: center; /* Centers cards in the container */
+    padding: 20px; /* Adds padding around the container */
+}
+
+.tour-card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    background: white;
+}
+
+.tour-card:hover {
+    opacity: 0.6;
+    transform: scale(1.03);
+}
+
+.tour-image {
+    position: relative;
+    width: 100%;
+}
+
+.tour-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+.tour-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.tour-title a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.tour-duration {
+    font-size: 14px;
+    color: #666;
+}
+
+.tour-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d9534f;
+}
+
+/* Footer Container */
+.footer {
+    margin-top: 50px;
+    background: #231e1e;
+    color: #f7efe8;
+    padding: 2rem 0;
+    text-align: center; /* Center text by default */
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+                rgba(17, 17, 26, 0.1) 0px 8px 24px,
+                rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Subtle top border */
+  }
+
+  /* Footer Headings */
+  .footer h3 {
+    color: #f7efe8;
+    margin-bottom: 1rem;
+  }
+
+  /* Footer Content Wrapper */
+  .footer-content {
+    display: flex;
+    flex-direction: column;    /* Stack columns on mobile */
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;                 /* Space between columns */
+    width: 90%;
+    max-width: 1200px;         /* Constrain max width on large screens */
+    margin: 0 auto;            /* Center the container */
+  }
+
+  /* Footer Columns */
+  .footer-content-column {
+    flex: 1;                   /* Allow columns to share available space */
+    min-width: 220px;          /* Prevent columns from getting too narrow */
+  }
+
+  /* Logo or any images inside footer */
+  .footer-content-column img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  /* Footer Links */
+  .footer-content a {
+    color: #f7efe8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .footer-content a:hover {
+    color: #ccc;
+  }
+
+  /* Unordered Lists inside the Footer */
+  .footer-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Larger Screens: Place columns side by side */
+  @media (min-width: 768px) {
+    .footer-content {
+      flex-direction: row;     /* Switch to a row layout on tablets/desktops */
+      align-items: flex-start; /* Top-align columns */
+      justify-content: space-between;
+    }
+  }
