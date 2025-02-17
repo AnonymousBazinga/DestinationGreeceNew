@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+  font-family: "Georgia", serif;
+  background-color: #f4f9ff; /* Light Santorini Blue */
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Main Container */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+}
+
+/* Header with Image Side by Side */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+header {
+  flex: 1;
+  text-align: left;
+}
+
+header h1 {
+  font-size: 28px;
+  color: #2a4d69; /* Deep blue */
+  margin-bottom: 8px;
+}
+
+header p {
+  font-size: 18px;
+  color: #467599;
+}
+
+.image-section img {
+  max-width: 250px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Sections */
+.details, .itenary, .services {
+  margin-top: 30px;
+}
+
+h2 {
+  font-size: 22px;
+  color: #2a4d69;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #bcdffb;
+}
+
+/* Price */
+#package-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1c3d5a;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Itinerary */
+#itenary-list {
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+#itenary-list div {
+  padding: 10px 0;
+  border-bottom: 1px dashed #aacbe8;
+}
+
+#itenary-list div:last-child {
+  border-bottom: none;
+}
+
+/* Services */
+#package-services {
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-section img {
+    max-width: 70%;
+  }
+}
